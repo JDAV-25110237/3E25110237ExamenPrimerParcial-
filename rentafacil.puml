@@ -1,0 +1,47 @@
+class Vehiculo
+class Auto
+class Moto
+class Camioneta
+class Cliente
+class Alquiler
+
+Vehiculo <|-- Auto
+Vehiculo <|-- Moto
+Vehiculo <|-- Camioneta
+
+Cliente "1" -- "0..3" Alquiler
+Alquiler "1" -- "1..*" Vehiculo
+
+class Vehiculo{
+•⁠  ⁠placa
+•⁠  ⁠marca
+•⁠  ⁠modelo
+•⁠  ⁠anio
+•⁠  ⁠precioPorDia
+}
+
+class Moto{
+•⁠  ⁠cilindrada
+}
+
+class Camioneta{
+•⁠  ⁠capacidadCarga
+}
+
+class Cliente{
+•⁠  ⁠id
+•⁠  ⁠nombre
+•⁠  ⁠dni
+•⁠  ⁠telefono
+}
+
+class Alquiler{
+•⁠  ⁠codigo
+•⁠  ⁠fechaInicio
+•⁠  ⁠fechaFin
+•⁠  ⁠costoTotal
+•⁠  ⁠estado
++ calcularCosto()
++ finalizar()
+}
+
